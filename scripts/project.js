@@ -3,12 +3,15 @@
 const articlesElement = document.getElementById("articles");
 /* W05: Programming Tasks */
 let wData = null;
-let URL = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,relative_humidity_2m,apparent_temperature,rain&timezone=auto&forecast_days=3"
+let URL = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,relative_humidity_2m,apparent_temperature,rain&timezone=auto&forecast_days=1"
 
 function getCoordinates() {
     let long = document.querySelector("#longitude").value;
-    let lati = document.querySelector("#latitude").value;
+    let lati = document.querySelector("#latitude").value;    
     let days = document.querySelector("#days").value;
+    if (days == "") {
+        days = "1";
+    }
     URL = `https://api.open-meteo.com/v1/forecast?latitude=${lati}&longitude=${long}&hourly=temperature_2m,relative_humidity_2m,apparent_temperature,rain&timezone=auto&forecast_days=${days}`;
     reset();
     getData();

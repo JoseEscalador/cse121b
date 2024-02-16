@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSE 121b | W05: Programming Tasks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/main project.css">
+</head>
+
+<body>
+  <nav>
+    <ul id="menu">
+      <li><a id="toggleMenu">&equiv;</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="w01-task.html">W1 Task</a></li>
+      <li><a href="w03-task.html">W3 Task</a></li>
+      <li><a href="w04-task.html">W4 Task</a></li>
+      <li><a href="w05-task.html">W5 Task</a></li>
+      <li><a href="project.html" class="active" >Project</a></li>
+    </ul>
+  </nav>
+  <main id="gridly">
+    <h1>W06: Project</h1>
+    <h2>Weather Info</h2>
+    <h3>This is a little web app to get some weather information for a given coordinate from 1 to 9 days. 
+    Have fun! </h3>
+    <!-- <div id="selection"> -->
+    <section id="section2">
+      <h2>Select Coordinates</h2>
+      <label class="right">Longitude:
+          <input type="number" id="longitude" size="5">
+      </label>
+      <label class="right">Latitude:
+        <input type="number" id="latitude" size="5">
+      </label>
+      <label class="right">How many days? (Maximum of 9)
+        <input type="number" id="days" size="5">
+      </label>
+      <div class="right">
+          <input type="button" id="apply" value="Apply">
+      </div>
+    </section>
+    <!-- </div> -->
+    
+
+    <div id="articles">
+      
+    </div>
+  </main>
+
+
+  <footer>
+    &copy;<span id="year"></span> | Week 05 - Fetching Temple Data | CSE 121b
+  </footer>
+  <script src="scripts/main.js"></script>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+  <script src="scripts/project.js"></script>
+</body>
+
+</html>
